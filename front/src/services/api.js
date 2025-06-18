@@ -3,7 +3,6 @@ import axios from "axios";
 
 const API_BASE_URL = "http://localhost:4000/api";
 
-//change this to connect both article and journalist
 export const getArticles = async () => {
   const response = await axios.get(`${API_BASE_URL}/articles`);
   return response.data;
@@ -33,7 +32,6 @@ export const getArticlesByJournalist = async (journalistId) => {
   const response = await axios.get(`${API_BASE_URL}/articles/journalists/${journalistId}/articles`);
   return response.data;
 };
-
 
 export const getJournalistById = async (id) => {
   const response = await axios.get(`${API_BASE_URL}/journalists/${id}`);
